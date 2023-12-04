@@ -28,16 +28,16 @@ class OrderAPI(APIView):
     
 class StripeAPI(APIView):
     def get(self, request, id):
-        print(settings.STRIPE_SECRET_KEY)
         item = Item.objects.get(id=id)
         currency = item.currency
+        print(item.price)
         session = stripe.checkout.Session.create(
                 payment_method_types=["card"],
                 line_items=[
                     {
                         "price_data": {
                             "currency": currency.currency,
-                            "unit_amount_decimal": item.price,
+                            "unit_amount_decimal": 100 * item.price,
                             "product_data": {
                                 "name": item.name,
                                 "description": item.description
@@ -77,7 +77,7 @@ class StripeOrderAPI(APIView):
             line_items.append({
                 "price_data": {
                     "currency": "usd",
-                    "unit_amount_decimal": item.price,
+                    "unit_amount_decimal": 100 * item.price,
                     "product_data": {
                         "name": item.name,
                         "description": item.description,

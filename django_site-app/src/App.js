@@ -5,6 +5,7 @@ import Order from "./components/Order";
 import { useSelector } from "react-redux";
 import { loadStripe } from "@stripe/stripe-js"
 import { useEffect } from "react";
+import NotFound from "./components/NotFound";
 
 const App = () => {
     const sessionId = useSelector(state => state.sessionId.sessionId)
@@ -22,13 +23,10 @@ const App = () => {
 
 
     return (
-        <Routes>
-            <Route path='front'>
-                <Route path="item"> 
-                    <Route path=":itemId"  element={<ItemInfo />}/>
-                </Route>
-                <Route path="order/:orderId" element={<Order />}/>
-            </Route>
+        <Routes> 
+            <Route path="item/:itemId"  element={<ItemInfo />}/>
+            <Route path="order/:orderId" element={<Order />}/>
+            <Route path="*" element={<NotFound />}/>
         </Routes>
     )
 }

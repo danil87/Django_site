@@ -1,0 +1,220 @@
+[
+    {
+        "model": "api.currency",
+        "pk": 1,
+        "fields": {
+            "currency": "usd"
+        }
+    },
+    {
+        "model": "api.currency",
+        "pk": 2,
+        "fields": {
+            "currency": "eur"
+        }
+    },
+    {
+        "model": "api.item",
+        "pk": 1,
+        "fields": {
+            "name": "item1",
+            "description": "description1",
+            "price": 10,
+            "currency_id": 1
+        }
+    },
+    {
+        "model": "api.item",
+        "pk": 2,
+        "fields": {
+            "name": "item2",
+            "description": "description2",
+            "price": 20,
+            "currency_id": 2
+        }
+    },
+    {
+        "model": "api.item",
+        "pk": 3,
+        "fields": {
+            "name": "item3",
+            "description": "description3",
+            "price": 30,
+            "currency_id": 1
+        }
+    },
+    {
+        "model": "api.item",
+        "pk": 4,
+        "fields": {
+            "name": "item4",
+            "description": "description4",
+            "price": 40,
+            "currency_id": 2
+        }
+    },
+    {
+        "model": "api.item",
+        "pk": 5,
+        "fields": {
+            "name": "item5",
+            "description": "description5",
+            "price": 50,
+            "currency_id": 1
+        }
+    },
+    {
+        "model": "api.item",
+        "pk": 6,
+        "fields": {
+            "name": "item6",
+            "description": "description6",
+            "price": 60,
+            "currency_id": 2
+        }
+    },
+    {
+        "model": "api.item",
+        "pk": 7,
+        "fields": {
+            "name": "item7",
+            "description": "description7",
+            "price": 70,
+            "currency_id": 1
+        }
+    },
+    {
+        "model": "api.item",
+        "pk": 8,
+        "fields": {
+            "name": "item8",
+            "description": "description8",
+            "price": 80,
+            "currency_id": 2
+        }
+    },
+    {
+        "model": "api.item",
+        "pk": 9,
+        "fields": {
+            "name": "item9",
+            "description": "description9",
+            "price": 90,
+            "currency_id": 1
+        }
+    },
+    {
+        "model": "api.item",
+        "pk": 10,
+        "fields": {
+            "name": "item10",
+            "description": "description10",
+            "price": 100,
+            "currency_id": 2
+        }
+    },
+    {
+        "model": "api.discount",
+        "pk": 1,
+        "fields": {
+            "name": "15%",
+            "duration": "once",
+            "percent_off": 15
+        }
+    },
+    {
+        "model": "api.discount",
+        "pk": 2,
+        "fields": {
+            "name": "20%",
+            "duration": "once",
+            "percent_off": 20
+        }
+    },
+    {
+        "model": "api.discount",
+        "pk": 3,
+        "fields": {
+            "name": "30%",
+            "duration": "once",
+            "percent_off": 30
+        }
+    },
+    {
+        "model": "api.tax",
+        "pk": 1,
+        "fields": {
+            "display_name": "НДС",
+            "inclusive": false,
+            "percentage": 20
+        }
+    },
+    {
+        "model": "api.tax",
+        "pk": 2,
+        "fields": {
+            "display_name": "НДС",
+            "inclusive": false,
+            "percentage": 10
+        }
+    },
+    {
+        "model": "api.tax",
+        "pk": 3,
+        "fields": {
+            "display_name": "НДС",
+            "inclusive": false,
+            "percentage": 15
+        }
+    },
+    {
+        "model": "api.order",
+        "pk": 1,
+        "fields": {
+            "dicount_id": 1,
+            "tax_id": 1,
+            "items": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+            ]
+        }
+    },
+    {
+        "model": "api.order",
+        "pk": 2,
+        "fields": {
+            "dicount_id": 2,
+            "tax_id": 2,
+            "items": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "api.order",
+        "pk": 3,
+        "fields": {
+            "dicount_id": 3,
+            "tax_id": 3,
+            "items": [
+                6,
+                7,
+                8,
+                9,
+                10
+            ]
+        }
+    }
+]
