@@ -1,0 +1,6 @@
+.order{
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+}

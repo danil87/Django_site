@@ -1,0 +1,7 @@
+.item_list .item{
+    margin-bottom: 50px; 
+}
+
+.item_list:last-child{
+    border-bottom: 1px solid #000;
+}
