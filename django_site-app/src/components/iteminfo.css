@@ -1,0 +1,10 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.item_info{
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+}
